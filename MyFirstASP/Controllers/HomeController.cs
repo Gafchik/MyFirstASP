@@ -25,12 +25,9 @@ namespace MyFirstASP.Controllers
         {
             Task.Run(() =>
             {
-                 long ip = Request.HttpContext.Connection.RemoteIpAddress.Address;
-              //  long ip = 1;
-                 string date = DateTime.Now.Day.ToString() + ":" + DateTime.Now.Month.ToString() + ":" + DateTime.Now.Year.ToString();
-                  string time = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString();
-               // string date = "test";
-               // string time = "test2";
+                long ip = Request.HttpContext.Connection.RemoteIpAddress.Address;
+                string date = DateTime.Now.Day.ToString() + ":" + DateTime.Now.Month.ToString() + ":" + DateTime.Now.Year.ToString();
+                string time = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString();
                 userRepo.Autorez(new User()
                 {
                     IP = ip,
